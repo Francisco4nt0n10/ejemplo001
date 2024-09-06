@@ -21,6 +21,10 @@ class WordCounter
       @text = new_text
     end
   
+    def to_s
+      "objeto del contador con texto: '#{@text}'"
+    end
+  
   end
   
   puts "Por favor, introduce una cadena de texto:"
@@ -35,6 +39,8 @@ end
   puts "Por favor, introduce una nueva cadena de texto para actualizar:"
   newinput = gets.chomp
   counter.update_text(newinput)
+
+  puts counter
 
   newResult = counter.count_words
   puts "Nuevo conteo de palabras después de la actualización:"
